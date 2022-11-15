@@ -2,6 +2,6 @@
 <p>You have made it to the tasks index page.</p>
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= "ID: #{task.id}, Title: #{task.title}, Details: #{task.details}" %></li>
+  <li><%= link_to "#{task.id} - #{task.title}", "http://localhost:3000/tasks/#{task.id}" %></li>
   <% end %>
 </ul>
