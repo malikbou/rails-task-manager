@@ -1,13 +1,2 @@
 <h1>New task</h1>
-  <div class="container mb-3">
-    <%= form_with model: @task do |f| %>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-      <%= f.label :details %>
-      <%= f.text_field :details %>
-      <%= f.label :completed %>
-      <%= f.check_box :completed %>
-      <%= f.submit %>
-    <% end %>
-  </div>
-<%= link_to "Back to task list", "http://localhost:3000/tasks" %>
+<%= render "form", task: @task %>
