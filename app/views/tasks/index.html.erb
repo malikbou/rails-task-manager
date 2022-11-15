@@ -1,7 +1,7 @@
-<h1>Congrats!</h1>
-<p>You have made it to the tasks index page.</p>
+<h1>My tasks</h1>
 <ul>
   <% @tasks.each do |task| %>
-  <li><%= link_to "#{task.id} - #{task.title}", "http://localhost:3000/tasks/#{task.id}" %></li>
+  <li><%= link_to "#{task.completed} #{task.id} - #{task.title}", "http://localhost:3000/tasks/#{task.id}" %></li>
   <% end %>
 </ul>
+<%= link_to "Add a new task", "http://localhost:3000/tasks/new" %>
